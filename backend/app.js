@@ -7,9 +7,10 @@ const cookieParser = require('cookie-parser');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const { errors } = require('celebrate');
-const { requestLogger, errorLogger } = require('./middlewares/logger');
+const cors = require('cors');
 
 const appRouter = require('./routes/appRouter');
+const urls = require('./constants/constants');
 
 const { PORT = 3000 } = process.env;
 
@@ -19,6 +20,13 @@ const limiter = rateLimit({
   max: 100,
 });
 
+app.use(
+  cors({
+    origin: urls,
+    credentials: true,
+  }),
+);
+
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,13 +34,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(limiter);
 app.use(helmet());
 
-app.use(requestLogger);
-
 app.use('', appRouter);
 
 mongoose.connect('mongodb://localhost:27017/mestodb');
-
-app.use(errorLogger);
 
 app.use(errors());
 
