@@ -14,6 +14,12 @@ const appRouter = require('./routes/appRouter');
 
 const { PORT = 3000 } = process.env;
 
+const urls = [
+  'http://esto.mesto.nomoredomains.xyz',
+  'https://esto.mesto.nomoredomains.xyz',
+  'http://localhost:3000',
+];
+
 const app = express();
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -29,7 +35,7 @@ app.use(helmet());
 
 app.use(
   cors({
-    origin: 'http://esto.mesto.nomoredomains.xyz',
+    origin: urls,
     credentials: true,
   }),
 );
