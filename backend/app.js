@@ -20,19 +20,19 @@ const limiter = rateLimit({
   max: 100,
 });
 
-app.use(
-  cors({
-    origin: 'http://esto.mesto.nomoredomains.xyz',
-    credentials: true,
-  }),
-);
-
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(limiter);
 app.use(helmet());
+
+app.use(
+  cors({
+    origin: 'http://esto.mesto.nomoredomains.xyz',
+    credentials: true,
+  }),
+);
 
 app.use('', appRouter);
 
