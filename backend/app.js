@@ -20,7 +20,12 @@ const limiter = rateLimit({
   max: 100,
 });
 
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://esto.mesto.nomoredomains.xyz',
+    credentials: true,
+  }),
+);
 
 app.use(bodyParser.json());
 app.use(cookieParser());
