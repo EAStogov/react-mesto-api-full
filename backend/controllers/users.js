@@ -140,8 +140,10 @@ const login = (req, res, next) => {
         maxAge: 3600000 * 24,
         httpOnly: true,
       });
-
-      return res.send({ token });
+      const { name, userEmail, avatar } = user;
+      return res.send({
+        token, name, userEmail, avatar,
+      });
     })
     .catch(next);
 };
