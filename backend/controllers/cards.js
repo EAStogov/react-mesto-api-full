@@ -39,6 +39,7 @@ const deleteCard = (req, res, next) => {
   Card.findById(req.params.cardId)
     // eslint-disable-next-line consistent-return
     .then((card) => {
+      console.log(card);
       if (!card) {
         next(new NotFoundError('Такой карточки не существует'));
       }
@@ -46,7 +47,7 @@ const deleteCard = (req, res, next) => {
         next(new Forbidden('Удалять чужую карточку запрещено'));
       }
       Card.findOneAndRemove(card)
-        .then(() => res.send({ data: card }))
+        .then((deletedCard) => res.send({ data: deletedCard }))
         .catch((err) => {
           if (err.name === 'CastError') {
             next(new BadRequestError('Введены некорректные данные'));
