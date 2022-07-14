@@ -7,13 +7,13 @@ const auth = require('../middlewares/auth');
 const { login, createUser } = require('../controllers/users');
 const NotFoundError = require('../errors/NotFoundError');
 
-router.post('/signin', celebrate({
+router.post('signin', celebrate({
   body: Joi.object().keys({
     email: Joi.string().required().email(),
     password: Joi.string().required(),
   }),
 }), login);
-router.post('/signup', celebrate({
+router.post('signup', celebrate({
   body: Joi.object().keys({
     email: Joi.string().required().email(),
     password: Joi.string().required(),
@@ -25,8 +25,8 @@ router.post('/signup', celebrate({
 
 router.use(auth);
 
-router.use('/users', userRouter);
-router.use('/cards', cardRouter);
+router.use('users', userRouter);
+router.use('cards', cardRouter);
 
 router.use('*', () => {
   throw new NotFoundError('Страница не найдена');

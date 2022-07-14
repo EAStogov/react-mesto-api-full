@@ -34,7 +34,7 @@ app.use(
   }),
 );
 
-app.use('', appRouter);
+app.use('/', appRouter);
 
 mongoose.connect('mongodb://localhost:27017/mestodb');
 
