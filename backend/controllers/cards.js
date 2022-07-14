@@ -45,7 +45,7 @@ const deleteCard = (req, res, next) => {
       if (JSON.stringify(req.user._id) !== JSON.stringify(card.owner)) {
         next(new Forbidden('Удалять чужую карточку запрещено'));
       }
-      Card.findOneAndDelete(card)
+      Card.findOneAndRemove(card)
         .then((deletedCard) => res.send({ data: deletedCard }))
         .catch((err) => {
           if (err.name === 'CastError') {
