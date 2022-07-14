@@ -46,7 +46,7 @@ const deleteCard = (req, res, next) => {
         next(new Forbidden('Удалять чужую карточку запрещено'));
       }
       Card.findOneAndRemove(card)
-        .then((removedCard) => res.send({ data: removedCard }))
+        .then(() => res.send({ data: card }))
         .catch((err) => {
           if (err.name === 'CastError') {
             next(new BadRequestError('Введены некорректные данные'));
