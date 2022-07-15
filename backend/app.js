@@ -11,13 +11,16 @@ const { errors } = require('celebrate');
 const cors = require('cors');
 
 const appRouter = require('./routes/appRouter');
-// const urls = require('./constants/constants');
+const urls = require('./constants/constants');
 
 const { PORT = 3000 } = process.env;
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: urls,
+  credentials: true,
+}));
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
