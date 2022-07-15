@@ -11,18 +11,14 @@ const { errors } = require('celebrate');
 const cors = require('cors');
 
 const appRouter = require('./routes/appRouter');
-// const urls = require('./constants/constants');
+const urls = require('./constants/constants');
 
 const { PORT = 3000 } = process.env;
 
 const app = express();
 
 app.use(cors({
-  origin: [
-    'http://esto.mesto.nomoredomains.xyz',
-    'https://esto.mesto.nomoredomains.xyz',
-    'localhost:3000',
-  ],
+  origin: urls,
   credentials: true,
 }));
 
