@@ -29,12 +29,6 @@ app.use(helmet());
 
 app.use(cors());
 
-app.get('/crash-test', () => {
-  setTimeout(() => {
-    throw new Error('Сервер сейчас упадёт');
-  }, 0);
-});
-
 app.use('', appRouter);
 
 mongoose.connect('mongodb://localhost:27017/mestodb');
