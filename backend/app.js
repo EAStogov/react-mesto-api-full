@@ -17,10 +17,10 @@ const { PORT = 3000 } = process.env;
 
 const app = express();
 
-app.use(cors({
-  origin: true,
-  credentials: true,
-}));
+// app.use(cors({
+//   origin: urls,
+//   credentials: true,
+// }));
 
 app.options('*', cors());
 
