@@ -4,6 +4,7 @@ const urls = [
   'http://api.esto.mesto.nomoredomains.xyz',
   'https://api.esto.mesto.nomoredomains.xyz',
   'localhost:3000',
+  'localhost:3001',
 ];
 
 module.exports = urls;
