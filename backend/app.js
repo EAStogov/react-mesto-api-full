@@ -7,7 +7,8 @@ const cookieParser = require('cookie-parser');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const { errors } = require('celebrate');
-const cors = require('./middlewares/cors');
+// const cors = require('./middlewares/cors');
+const cors = require('cors');
 
 const appRouter = require('./routes/appRouter');
 // const urls = require('./constants/constants');
@@ -27,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(limiter);
 app.use(helmet());
 
-app.use(cors());
+app.use(cors);
 
 app.use('', appRouter);
 
