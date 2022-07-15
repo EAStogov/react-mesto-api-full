@@ -36,6 +36,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(limiter);
 app.use(helmet());
 
+app.all('/*', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With');
+  next();
+});
+
 app.use('', appRouter);
 
 mongoose.connect('mongodb://localhost:27017/mestodb');
