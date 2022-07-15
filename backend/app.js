@@ -10,7 +10,7 @@ const { errors } = require('celebrate');
 const cors = require('cors');
 
 const appRouter = require('./routes/appRouter');
-const urls = require('./constants/constants');
+// const urls = require('./constants/constants');
 
 const { PORT = 3000 } = process.env;
 
@@ -27,12 +27,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(limiter);
 app.use(helmet());
 
-app.use(
-  cors({
-    origin: urls,
-    credentials: true,
-  }),
-);
+app.use(cors());
+
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 
 app.use('', appRouter);
 
