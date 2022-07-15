@@ -7,7 +7,8 @@ const cookieParser = require('cookie-parser');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const { errors } = require('celebrate');
-const cors = require('./middlewares/cors');
+// const cors = require('./middlewares/cors');
+const cors = require('cors');
 
 const appRouter = require('./routes/appRouter');
 // const urls = require('./constants/constants');
@@ -15,6 +16,9 @@ const appRouter = require('./routes/appRouter');
 const { PORT = 3000 } = process.env;
 
 const app = express();
+
+app.use(cors());
+
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100,
@@ -26,8 +30,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(limiter);
 app.use(helmet());
-
-app.use(cors);
 
 app.use('', appRouter);
 
