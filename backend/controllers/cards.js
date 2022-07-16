@@ -2,16 +2,13 @@ const Card = require('../models/card');
 
 const NotFoundError = require('../errors/NotFoundError');
 const BadRequestError = require('../errors/BadRequestError');
-const UnauthorizedError = require('../errors/UnauthorizedError');
 const UnknownError = require('../errors/UnknownError');
 const Forbidden = require('../errors/Forbidden');
 
 const getCards = (_req, res, next) => {
   Card.find()
     .then((cards) => res.send({ data: cards }))
-    .catch(() => {
-      next(new UnauthorizedError('Необходимо авторизоваться'));
-    });
+    .catch(next);
 };
 
 const postCard = (req, res, next) => {
