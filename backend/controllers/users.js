@@ -47,11 +47,12 @@ const getMe = (req, res, next) => {
 
 const createUser = (req, res, next) => {
   User.findOne({ email: req.body.email })
+    // eslint-disable-next-line consistent-return
     .then((user) => {
       if (user) {
         const err = new Error('Пользователь с таким email уже зарегистрирован');
         err.statusCode = 409;
-        next(err);
+        return next(err);
       }
       bcrypt.hash(req.body.password, 10)
         .then((hash) => User.create({
@@ -70,9 +71,10 @@ const createUser = (req, res, next) => {
         .catch((err) => {
           if (err.name === 'ValidationError') {
             next(new BadRequestError('Введены некорректные данные'));
-          }
+          } else { next(err); }
         });
-    });
+    })
+    .catch(next);
 };
 
 const updateUserProfile = (req, res, next) => {

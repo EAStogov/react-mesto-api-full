@@ -37,10 +37,10 @@ const deleteCard = (req, res, next) => {
     // eslint-disable-next-line consistent-return
     .then((card) => {
       if (!card) {
-        next(new NotFoundError('Такой карточки не существует'));
+        return next(new NotFoundError('Такой карточки не существует'));
       }
       if (JSON.stringify(req.user._id) !== JSON.stringify(card.owner)) {
-        next(new Forbidden('Удалять чужую карточку запрещено'));
+        return next(new Forbidden('Удалять чужую карточку запрещено'));
       }
       Card.findByIdAndRemove(req.params.cardId)
         .then((deletedCard) => res.send({ data: deletedCard }))
