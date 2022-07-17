@@ -4,7 +4,7 @@ const router = require('express').Router();
 const userRouter = require('./users');
 const cardRouter = require('./cards');
 const auth = require('../middlewares/auth');
-const { login, createUser } = require('../controllers/users');
+const { login, createUser, signout } = require('../controllers/users');
 const NotFoundError = require('../errors/NotFoundError');
 
 router.get('/crash-test', () => {
@@ -28,6 +28,8 @@ router.post('/signup', celebrate({
     avatar: Joi.string().pattern(/^((https?:\/\/)|(www\.))([\w-]+)\.([a-z]{2,6})(\/[\w/]*)?/),
   }),
 }), createUser);
+
+router.get('/signout', signout);
 
 router.use(auth);
 
