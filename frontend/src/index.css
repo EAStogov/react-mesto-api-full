@@ -1,0 +1,77 @@
+html {
+  background-color: black;
+}
+@import url(./vendor/normalize.css);
+@import url(./fonts/inter.css);
+
+@import url(./blocks/page/page.css);
+@import url(./blocks/page/__button/page__button.css);
+
+@import url(./blocks/header/header.css);
+@import url(./blocks/header/_column/header_column.css);
+@import url(./blocks/header/__container/header__container.css);
+@import url(./blocks/header/__link/header__link.css);
+@import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/__auth/header__auth.css);
+@import url(./blocks/header/__email/header__email.css);
+@import url(./blocks/header/__burger/header__burger.css);
+@import url(./blocks/header/__burger/_active/header__burger_active.css);
+@import url(./blocks/header/__burger/_cross-icon/header__burger_cross-icon.css);
+@import url(./blocks/header/__auth/_hidden/header__auth_hidden.css);
+@import url(./blocks/header/__auth/_column/header__auth_column.css);
+
+@import url(./blocks/profile/profile.css);
+@import url(./blocks/profile/__avatar/profile__avatar.css);
+@import url(./blocks/profile/__author/profile__author.css);
+@import url(./blocks/profile/__edit-author-container/profile__edit-author-container.css);
+@import url(./blocks/profile/__name/profile__name.css);
+@import url(./blocks/profile/__description/profile__description.css);
+@import url(./blocks/profile/__button/_type/profile__button_type_add.css);
+@import url(./blocks/profile/__button/_type/profile__button_type_avatar.css);
+@import url(./blocks/profile/__button/_type/profile__button_type_edit.css);
+
+@import url(./blocks/elements/elements.css);
+@import url(./blocks/elements/__list/elements__list.css);
+@import url(./blocks/elements/__card/elements__card.css);
+@import url(./blocks/elements/__place/elements__place.css);
+@import url(./blocks/elements/__image/elements__image.css);
+@import url(./blocks/elements/__trash/elements__trash.css);
+@import url(./blocks/elements/__trash/_desabled/elements__trash_desabled.css);
+@import url(./blocks/elements/__like-container/elements__like-container.css);
+@import url(./blocks/elements/__like/elements__like.css);
+@import url(./blocks/elements/__like-count/elements__like-count.css);
+@import url(./blocks/elements/__like/_active/elements__like_active.css);
+
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/footer/__text/footer__text.css);
+
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/_opened/popup_opened.css);
+@import url(./blocks/popup/__close/popup__close.css);
+
+@import url(./blocks/form/__container/form__container.css);
+@import url(./blocks/form/__container/_auth/form__container_auth.css);
+@import url(./blocks/form/__container/_sign-up/form__container_sign-up.css);
+@import url(./blocks/form/__body/form__body.css);
+@import url(./blocks/form/__body/_fill/form__body_fill_infoToolTip.css);
+@import url(./blocks/form/__heading/form__heading.css);
+@import url(./blocks/form/__heading/_hidden/form__heading_hidden.css);
+@import url(./blocks/form/__heading/_auth/form__heading_auth.css);
+@import url(./blocks/form/__input/form__input.css);
+@import url(./blocks/form/__input/_auth/form__input_auth.css);
+@import url(./blocks/form/__input/_type/form__input_type_error.css);
+@import url(./blocks/form/__error/form__error.css);
+@import url(./blocks/form/__error/_visible/form__error_visible.css);
+@import url(./blocks/form/__submit/form__submit.css);
+@import url(./blocks/form/__submit/_auth/form__submit_auth.css);
+@import url(./blocks/form/__submit/_disabled/form__submit_disabled.css);
+@import url(./blocks/form/__submit/_hidden/form__submit_hidden.css);
+
+@import url(./blocks/register/__sign-in/register__sign-in.css);
+@import url(./blocks/register/__link/register__link.css);
+
+@import url(./blocks/popup/__image/popup__image.css);
+@import url(./blocks/popup/__sign-up-heading/popup__sign-up-heading.css);
+@import url(./blocks/popup/__image-container/popup__image-container.css);
+@import url(./blocks/popup/__image-description/popup__image-description.css);
+@import url(./blocks/popup/__sign-up-result/popup__sign-up-result.css);

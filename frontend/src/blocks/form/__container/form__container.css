@@ -1,0 +1,25 @@
+.form__container {
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  width: 430px;
+  align-self: center;
+  margin: 0 auto;
+  padding: 34px 36px 37px 36px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  position: relative;
+}
+
+@media screen and (max-width: 468px) {
+  .form__container {
+    margin: 0 19px;
+  }
+}
+
+@media screen and (max-width: 423px) {
+  .form__container {
+    padding: 25px 22px 25px;
+  }
+}

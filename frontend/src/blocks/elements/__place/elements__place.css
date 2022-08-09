@@ -1,0 +1,10 @@
+.elements__place {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 25px auto 31px 21px;
+  font-size: 24px;
+  font-weight: 900;
+  background-color: white;
+  max-width: 215px;
+}

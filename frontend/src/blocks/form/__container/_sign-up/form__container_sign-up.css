@@ -1,0 +1,9 @@
+.form__container_sign-up {
+  padding: 60px 36px;
+}
+
+@media screen and (max-width: 385px) {
+  .form__container_sign-up {
+    padding: 50px 18px;
+  }
+}

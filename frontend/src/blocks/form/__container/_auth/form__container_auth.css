@@ -1,0 +1,21 @@
+.form__container_auth {
+  padding: 60px 0 0;
+  background-color: black;
+  color: white;
+  padding-bottom: 14px;
+  max-width: 358px;
+  margin: 0 30px;
+  flex-shrink: 1;
+}
+
+@media screen and (max-width: 468px) {
+  .form__container_auth {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 418px) {
+  .form__container_auth {
+    max-width: 260px;
+  }
+}

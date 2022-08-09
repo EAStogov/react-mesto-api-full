@@ -1,0 +1,18 @@
+.form__input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  font-size: 14px;
+  font-weight: 400px;
+  padding: 0 0 10px;
+  margin: 0 0 30px 0;
+}
+
+.form__input:last-of-type {
+  margin-bottom: 48px;
+}
+
+@media screen and (max-width: 417px) {
+  .form__input:last-of-type {
+    margin-bottom: 45px;
+  }
+}

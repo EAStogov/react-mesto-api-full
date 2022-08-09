@@ -1,0 +1,18 @@
+.profile__edit-author-container {
+  display: flex;
+  align-items: center;
+  min-width: 1px;
+}
+
+@media screen and (max-width: 695px) {
+  .profile__edit-author-container {
+    position: relative;
+    padding-left: 60px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .profile__edit-author-container {
+    padding-left: 40px;
+  }
+}

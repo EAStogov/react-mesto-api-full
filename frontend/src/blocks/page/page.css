@@ -1,0 +1,33 @@
+.page {
+  background-color: black;
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  margin: 41px auto 60px;
+  font-family: Inter, Arial, sans-serif;
+  color: white;
+}
+
+@media screen and (max-width: 1279px) {
+  .page {
+    margin-bottom: calc(100vw * 60 / 1280);
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .page {
+    margin-top: 41px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (max-width: 649px) {
+  .page {
+    margin-top: 31px;
+  }
+}

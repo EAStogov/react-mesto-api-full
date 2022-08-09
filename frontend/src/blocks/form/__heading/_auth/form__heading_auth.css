@@ -1,0 +1,11 @@
+.form__heading_auth {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 418px) {
+  .form__heading_auth {
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+}

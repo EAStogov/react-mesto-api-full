@@ -1,0 +1,13 @@
+.popup__sign-up-heading {
+  margin: 32px 0 0;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+}
+
+@media screen and (max-width: 385px) {
+  .popup__sign-up-heading {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+}
