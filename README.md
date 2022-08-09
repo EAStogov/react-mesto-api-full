@@ -10,6 +10,3 @@
 ## Ссылки на фронт и бэк:
 https://esto.mesto.nomoredomains.xyz
 https://api.esto.mesto.nomoredomains.xyz
-
-### Код фронтенда:
-https://github.com/EAStogov/react-mesto-auth
