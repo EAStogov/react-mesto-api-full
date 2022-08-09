@@ -36,7 +36,7 @@ router.use(auth);
 router.use('/users', userRouter);
 router.use('/cards', cardRouter);
 
-router.use('*', () => {
+router.use('/*', () => {
   throw new NotFoundError('Страница не найдена');
 });
 
