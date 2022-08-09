@@ -8,5 +8,5 @@
 * MongoDB;
 
 ## Ссылки на фронт и бэк:
-https://esto.mesto.nomoredomains.xyz
-https://api.esto.mesto.nomoredomains.xyz
+* https://esto.mesto.nomoredomains.xyz
+* https://api.esto.mesto.nomoredomains.xyz
