@@ -1,12 +1,20 @@
-# react-mesto-api-full
-Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями.
+# Проект: Место
+
+<a align="center" width="50px" height="30px" backgroung-color="green" href="https://esto.mesto.nomoredomains.xyz">DEMO</a>
+
+Репозиторий для приложения проекта `Mesto`, включающий бэкенд и фронтенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями.
 
 ## Технологии, которые я использовал:
-* React;
+* React.js;
 * Node.js;
 * Express.js;
 * MongoDB;
 
-## Ссылки на фронт и бэк:
-* https://esto.mesto.nomoredomains.xyz
+## API:
 * https://api.esto.mesto.nomoredomains.xyz
+
+
+## Запуск проекта
+
+`npm run start` — запускает сервер   
+`npm run dev` — запускает сервер с hot-reload
