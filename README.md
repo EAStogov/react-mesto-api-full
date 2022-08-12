@@ -1,6 +1,6 @@
 # Проект: Место
 
-<button width="50px" height="30px" backgroung-color="green"><a href="https://esto.mesto.nomoredomains.xyz">DEMO</a></button>
+<a href="https://esto.mesto.nomoredomains.xyz">DEMO</a>
 
 Репозиторий для приложения проекта `Mesto`, включающий бэкенд и фронтенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями.
 
